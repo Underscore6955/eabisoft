@@ -7,6 +7,10 @@ public class inCombat : MonoBehaviour
 {
     public int morale;
     [SerializeField] TMP_Text moraleText;
+    private void Start()
+    {
+        GameObject.Find("enemyBase").GetComponent<spawnEnemy>().startSpawn(GameObject.Find("globalManager").GetComponent<globalManager>().difficulty);
+    }
     void FixedUpdate()
     {
         morale+=10;
@@ -16,6 +20,7 @@ public class inCombat : MonoBehaviour
     {
         moraleText.text = (int)morale / 10 + "/200";
         checkForClick();
+
     }
     void checkForClick()
     {

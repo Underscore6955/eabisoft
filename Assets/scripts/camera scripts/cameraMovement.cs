@@ -30,8 +30,8 @@ public class cameraMovement : MonoBehaviour
         else if(holdTime < 100 && holdTime > 0 && clicked != null) 
         {
             holdTime = 0;
-            clicked.gameObject.GetComponent<MonoBehaviour>().enabled = true; 
             if (!inMenu) { selectedObject = clicked; }
+            clicked.gameObject.GetComponent<MonoBehaviour>().enabled = true; 
         }
         if (!inMenu)
         {

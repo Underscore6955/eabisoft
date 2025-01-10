@@ -233,7 +233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3645576411850601063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
   m_Name: 
@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 6726032777529145451}
   - component: {fileID: 3549681417503296110}
   - component: {fileID: 6122653636557075103}
+  - component: {fileID: 4329528162381350583}
   m_Layer: 0
   m_Name: upgradeButton
   m_TagString: Clickable
@@ -344,6 +345,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4329528162381350583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5459407796929514729}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5510561223073275362
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +369,7 @@ GameObject:
   - component: {fileID: 3167982165906709103}
   - component: {fileID: 2101128927079544927}
   - component: {fileID: 7044236764911919473}
+  - component: {fileID: 7982590846553340048}
   m_Layer: 0
   m_Name: upgradeButton (1)
   m_TagString: Clickable
@@ -450,6 +464,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7982590846553340048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510561223073275362}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6776481863765931642
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +590,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6776481863765931642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
   m_Name: 
@@ -581,9 +607,6 @@ GameObject:
   - component: {fileID: 7724795179407847263}
   - component: {fileID: 1826816886974534462}
   - component: {fileID: 6154207349749699807}
-  - component: {fileID: 8706650972872201273}
-  - component: {fileID: 7553564436554541661}
-  - component: {fileID: 7428964391880389591}
   m_Layer: 0
   m_Name: shop1
   m_TagString: Untagged
@@ -684,42 +707,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8706650972872201273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7075515349724717200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7553564436554541661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7075515349724717200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7428964391880389591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7075515349724717200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8341973628668631495
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +719,7 @@ GameObject:
   - component: {fileID: 3484811165759330535}
   - component: {fileID: 6284041874766447837}
   - component: {fileID: 2873442978398949457}
+  - component: {fileID: 7673604454825815141}
   m_Layer: 0
   m_Name: upgradeButton (2)
   m_TagString: Clickable
@@ -826,3 +814,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7673604454825815141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341973628668631495}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c2fcdae490317429a8d59a13fe6679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

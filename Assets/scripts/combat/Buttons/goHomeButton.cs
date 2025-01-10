@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class upgradeTHreal : MonoBehaviour
+public class goHomeButton : MonoBehaviour
 {
-    void OnEnable()
+    private void OnEnable()
     {
         GameObject cameraObject = FindObjectOfType<Camera>().gameObject;
+        SceneManager.LoadScene("homeBase");
         gameObject.GetComponent<MonoBehaviour>().enabled = false;
     }
-
 }

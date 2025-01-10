@@ -21,7 +21,7 @@ public class SummonButton : MonoBehaviour
     {
         if (!started) return;
         var inCombat = FindObjectOfType<Camera>().gameObject.GetComponent<inCombat>();
-        var moneyScript = GameObject.Find("moneyManager").GetComponent<moneyScript>();
+        var moneyScript = GameObject.Find("globalManager").GetComponent<globalManager>();
         if (moneyScript.transaction(inCombat.morale, price))
         {
             if (!Physics.CheckBox(spawnpoint.transform.position, new Vector3(0.4f, 0.01f, 0.01f)))

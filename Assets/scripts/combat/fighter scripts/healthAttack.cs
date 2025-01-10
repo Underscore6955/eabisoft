@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class healthAttack : MonoBehaviour
@@ -24,5 +25,9 @@ public class healthAttack : MonoBehaviour
         attackTime = attackSpeed;
         Debug.Log(gameObject + " attacked " + attacked);
         attacked.GetComponent<healthAttack>().health-=damage;
+    }
+    private void OnDestroy()
+    {
+        if (gameObject.name == "enemyBase") { GameObject.Find("globalManager").GetComponent<globalManager>().win(); } else GameObject.Find("globalManager").GetComponent<globalManager>().loss();
     }
 }

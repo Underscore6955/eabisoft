@@ -1,16 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class cameraMovement2d : MonoBehaviour
 {
     Vector3 clickOrigin;
+    int timeSinceClick=10;
+    [SerializeField] Transform playerBase;
+    [SerializeField] Transform enemyBase;
     void Start()
     {
 
     }
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0) && Clicking() == null)
+        {
+            if (timeSinceClick < 10)
+            {
+                if (transform.position.x - playerBase.position.x < 0.5f * playerBase.position.x - enemyBase.position.x)
+                {
+                    if (Mathf.Abs(transform.position.x - playerBase.position.x) < 6) { gameObject.transform.position = new Vector3(enemyBase.position.x + 2, transform.position.y, transform.position.z); }
+                    else gameObject.transform.position = new Vector3(playerBase.position.x - 2, transform.position.y, transform.position.z);
+                }
+                else
+                {
+                    if (Mathf.Abs(transform.position.x - enemyBase.position.x) < 6) { gameObject.transform.position = new Vector3(playerBase.position.x - 2, transform.position.y, transform.position.z); }
+                    else gameObject.transform.position = new Vector3(enemyBase.position.x + 2, transform.position.y, transform.position.z);
+                }
+            }
+            timeSinceClick = 0;
+        }
         if (Input.GetMouseButton(0))
         {
             if (Clicking() != null)
@@ -23,6 +44,10 @@ public class cameraMovement2d : MonoBehaviour
             }
         }
         clickOrigin = Input.mousePosition;
+    }
+    private void FixedUpdate()
+    {
+        timeSinceClick++;
     }
     private GameObject Clicking()
     {
