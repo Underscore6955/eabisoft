@@ -11,6 +11,7 @@ public class globalManager : MonoBehaviour
     public float difficulty;
     GameObject attacked;
     int reward;
+    public bool combatNow = false;
     public List<string> destroyedBuildings;
     void Start()
     {
@@ -26,15 +27,17 @@ public class globalManager : MonoBehaviour
         difficulty = curDifficulty;
         attacked = curAttacked;
         reward = curReward;
+        combatNow = true;
         SceneManager.LoadScene("inFight");
     }
     public void win()
     {
         gold += reward;
         destroyedBuildings.Add(attacked.name);
+        combatNow = false;
     }
     public void loss()
     {
-
+        combatNow = false;
     }
 }

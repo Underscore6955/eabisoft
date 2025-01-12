@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 1
-  speed: 10
+  speed: 60
   range: 1
 --- !u!114 &5455982302559895324
 MonoBehaviour:
@@ -348,6 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7037b4aabe56e2d488d8a2903d5101bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
-  damage: 3
-  attackSpeed: 50
+  health: 1000000
+  damage: 50
+  attackSpeed: 20

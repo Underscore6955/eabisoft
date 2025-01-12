@@ -368,53 +368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reward: 100
   difficulty: 1.2
---- !u!1 &739074391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 739074393}
-  - component: {fileID: 739074392}
-  m_Layer: 0
-  m_Name: globalManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &739074392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739074391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f07d459dea39f499e5722097a04d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 0
-  gems: 0
-  difficulty: 0
---- !u!4 &739074393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739074391}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.562876, y: -3.3174357, z: 12.522402}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900792098
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,4 +576,3 @@ SceneRoots:
   - {fileID: 900792100}
   - {fileID: 2007758630}
   - {fileID: 476450872}
-  - {fileID: 739074393}

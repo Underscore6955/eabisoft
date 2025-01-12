@@ -15,19 +15,22 @@ public class healthAttack : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (!GameObject.Find("globalManager").GetComponent<globalManager>().combatNow) return;
         var fightScript = gameObject.GetComponent<fighterControl>();
-        if (health <= 0) Destroy(gameObject);
+        if (health <= 0) destroyCur();
         attackTime--;
         if (fightScript.checkForEnemy() != null && attackTime <=0) attack(fightScript.checkForEnemy());
     }
     void attack(GameObject attacked)
     {
+        gameObject.GetComponent<fighterControl>().anim.Play("attack");
         attackTime = attackSpeed;
         Debug.Log(gameObject + " attacked " + attacked);
         attacked.GetComponent<healthAttack>().health-=damage;
     }
-    private void OnDestroy()
+    private void destroyCur()
     {
-        if (gameObject.name == "enemyBase") { GameObject.Find("globalManager").GetComponent<globalManager>().win(); } else GameObject.Find("globalManager").GetComponent<globalManager>().loss();
+        if (gameObject.tag != "Base") { Destroy(gameObject); return; }
+        if (gameObject.name == "enemyBase") { GameObject.Find("globalManager").GetComponent<globalManager>().win(); Debug.Log("funk"); } else GameObject.Find("globalManager").GetComponent<globalManager>().loss();
     }
 }

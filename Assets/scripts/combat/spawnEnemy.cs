@@ -21,6 +21,7 @@ public class spawnEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameObject.Find("globalManager").GetComponent<globalManager>().combatNow) return;
         if (spawnCooldown > spawnCooldownC) { Instantiate(enemies[Random.Range(0, enemies.Count)], spawnpoint.transform.position, Quaternion.Euler(270, 0, 0)); spawnCooldown = 0; }
         spawnCooldown++;
     }

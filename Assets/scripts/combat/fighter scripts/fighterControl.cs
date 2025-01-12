@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class fighterControl : MonoBehaviour
@@ -9,12 +10,24 @@ public class fighterControl : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] int range;
     float walkrange = 0.5f;
+    [SerializeField] AnimationClip walking;
+    [SerializeField] AnimationClip standing;
+    public AnimationClip attacking;
+    [SerializeField] GameObject sprite;
+    public Animator anim;
+    private void Start()
+    {
+        anim = sprite.GetComponent<Animator>();
+    }
     void FixedUpdate()
     {
-        if (tag == "Fighter" && !Physics.Raycast(transform.position,new Vector3(dir,0,0),walkrange) && checkForEnemy() == null )
+        if (!GameObject.Find("globalManager").GetComponent<globalManager>().combatNow || gameObject.tag == "Base") return;
+        if (tag == "Fighter" && !Physics.Raycast(transform.position, new Vector3(dir, 0, 0), walkrange) && checkForEnemy() == null)
         {
             gameObject.transform.position += new Vector3(dir * speed * 0.001f, 0, 0);
+            anim.SetBool("walking", true);
         }
+        else anim.SetBool("walking", false);
     }
     public GameObject checkForEnemy()
     {
