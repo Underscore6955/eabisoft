@@ -8,9 +8,9 @@ public class closeMenu : MonoBehaviour
     {
         GameObject cameraObject = FindObjectOfType<Camera>().gameObject;
         if (cameraObject.GetComponent<cameraMovement>().clicked == gameObject) 
-        { 
-            cameraObject.GetComponent<cameraMovement>().inMenu = false;
-            Destroy(cameraObject.GetComponent<cameraMovement>().curMenu);
+        {
+            GameObject.Find("globalManager").GetComponent<globalManager>().inMenu = false;
+            Destroy(GameObject.FindGameObjectWithTag("Menu"));
             gameObject.GetComponent<MonoBehaviour>().enabled = false;
         }
     }

@@ -7,7 +7,7 @@ public class startCombatButton : MonoBehaviour
     private void OnEnable()
     {
         GameObject cameraObject = FindObjectOfType<Camera>().gameObject;
-        GameObject.Find("globalManager").GetComponent<globalManager>().startCombat(cameraObject.GetComponent<cameraMovement>().selectedObject, cameraObject.GetComponent<cameraMovement>().selectedObject.GetComponent<enemyBuildingData>().difficulty, cameraObject.GetComponent<cameraMovement>().selectedObject.GetComponent<enemyBuildingData>().reward);
+        GameObject.Find("globalManager").GetComponent<globalManager>().startCombat(cameraObject.GetComponent<cameraMovement>().selectedObject.name, cameraObject.GetComponent<cameraMovement>().selectedObject.GetComponent<enemyBuildingData>().difficulty, cameraObject.GetComponent<cameraMovement>().selectedObject.GetComponent<enemyBuildingData>().reward);
         gameObject.GetComponent<MonoBehaviour>().enabled = false;
     }
 }

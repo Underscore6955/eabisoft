@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 6726032777529145451}
   - component: {fileID: 3549681417503296110}
   - component: {fileID: 6122653636557075103}
-  - component: {fileID: 8574844039101036395}
+  - component: {fileID: 5265213421664819722}
   m_Layer: 0
   m_Name: goHome
   m_TagString: Clickable
@@ -209,7 +209,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8574844039101036395
+--- !u!114 &5265213421664819722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5459407796929514729}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3abed79de7fb9974da08d5f344036b20, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4fbd63cb1fc5a4990f0d77d8c22a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7075515349724717200
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 6154207349749699807}
   m_Layer: 0
   m_Name: winMenu
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

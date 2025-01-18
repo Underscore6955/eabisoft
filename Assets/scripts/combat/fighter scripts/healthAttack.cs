@@ -17,7 +17,7 @@ public class healthAttack : MonoBehaviour
     {
         if (!GameObject.Find("globalManager").GetComponent<globalManager>().combatNow) return;
         var fightScript = gameObject.GetComponent<fighterControl>();
-        if (health <= 0) destroyCur();
+        if (health <= 0) destroyCurrent();
         attackTime--;
         if (fightScript.checkForEnemy() != null && attackTime <=0) attack(fightScript.checkForEnemy());
     }
@@ -28,9 +28,9 @@ public class healthAttack : MonoBehaviour
         Debug.Log(gameObject + " attacked " + attacked);
         attacked.GetComponent<healthAttack>().health-=damage;
     }
-    private void destroyCur()
+    private void destroyCurrent()
     {
         if (gameObject.tag != "Base") { Destroy(gameObject); return; }
-        if (gameObject.name == "enemyBase") { GameObject.Find("globalManager").GetComponent<globalManager>().win(); Debug.Log("funk"); } else GameObject.Find("globalManager").GetComponent<globalManager>().loss();
+        if (gameObject.name == "enemyBase") { GameObject.Find("globalManager").GetComponent<globalManager>().win(); } /*else { GameObject.Find("globalManager").GetComponent<globalManager>().loss(); }*/
     }
 }

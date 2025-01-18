@@ -9,9 +9,8 @@ public class buildingScript : MonoBehaviour
     [SerializeField] GameObject cameraObject;
     void OnEnable()
     {
-        if (cameraObject.GetComponent<cameraMovement>().inMenu) return;
-        cameraObject.GetComponent<cameraMovement>().inMenu = true;
-        cameraObject.GetComponent<cameraMovement>().curMenu = Instantiate(buildingMenu, cameraObject.transform.position + cameraObject.transform.forward*1.5f, Quaternion.Euler(cameraObject.transform.eulerAngles.x - 90, 45, 0));
+        if (GameObject.Find("globalManager").GetComponent<globalManager>().inMenu) return;
+        GameObject.Find("globalManager").GetComponent<globalManager>().openMenu(buildingMenu);
         gameObject.GetComponent<MonoBehaviour>().enabled = false;
     }
 }

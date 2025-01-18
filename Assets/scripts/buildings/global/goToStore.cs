@@ -8,8 +8,8 @@ public class goToStore : MonoBehaviour
     void OnEnable()
     {
         GameObject cameraObject = FindObjectOfType<Camera>().gameObject;
-        Destroy(cameraObject.GetComponent<cameraMovement>().curMenu);
-        cameraObject.GetComponent<cameraMovement>().curMenu = Instantiate(shopMenu, cameraObject.transform.position + new Vector3(0.55f, -1.3f, 0.55f), Quaternion.Euler(-30, 45, 0));
+        Destroy(GameObject.FindGameObjectWithTag("Menu"));
+        GameObject.Find("globalManager").GetComponent<globalManager>().openMenu(shopMenu);
         gameObject.GetComponent<MonoBehaviour>().enabled = false;
     }
 }

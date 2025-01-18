@@ -11,7 +11,7 @@ public class cameraMovement2d : MonoBehaviour
     [SerializeField] Transform enemyBase;
     void Start()
     {
-
+        GameObject.Find("globalManager").GetComponent<globalManager>().inMenu = false;
     }
     private void Update()
     {

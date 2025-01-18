@@ -334,12 +334,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 1
-  speed: 10
+  speed: 50
   range: 1
   walking: {fileID: 7400000, guid: a5acbf9a6049fa844a8376995e18e7e9, type: 2}
   standing: {fileID: 7400000, guid: 271379e273e859c45a667219f724ad4e, type: 2}
   attacking: {fileID: 0}
   sprite: {fileID: 1638481895780333674}
+  anim: {fileID: 0}
 --- !u!114 &5455982302559895324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,4 +355,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 40
   damage: 3
-  attackSpeed: 50
+  attackSpeed: 5

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5459407796929514729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf4fbd63cb1fc5a4990f0d77d8c22a0c, type: 3}
   m_Name: 
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6154207349749699807}
   m_Layer: 0
   m_Name: lossMenu
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

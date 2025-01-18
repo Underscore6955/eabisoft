@@ -1016,6 +1016,7 @@ MonoBehaviour:
   standing: {fileID: 0}
   attacking: {fileID: 0}
   sprite: {fileID: 20136016}
+  anim: {fileID: 0}
 --- !u!114 &503363916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,7 +1497,7 @@ Transform:
   m_GameObject: {fileID: 994275258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.36328, y: -20.30669, z: 22.955814}
+  m_LocalPosition: {x: -27.36328, y: -1.08, z: -8.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2603,6 +2604,7 @@ MonoBehaviour:
   standing: {fileID: 0}
   attacking: {fileID: 0}
   sprite: {fileID: 1044272199}
+  anim: {fileID: 0}
 --- !u!114 &1614399936
 MonoBehaviour:
   m_ObjectHideFlags: 0
